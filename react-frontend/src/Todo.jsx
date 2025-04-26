@@ -64,12 +64,12 @@ function Todo() {
         marginLeft: 'auto',
         marginRight: 'auto',
         padding: '20px',
-        backgroundColor: '#f4f4f4',
+        backgroundColor: 'black', // Black background
         borderRadius: '10px',
       }}
     >
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <h1 style={{ fontSize: '2rem', marginTop: '50px' }}>Todo App</h1>
+        <h1 style={{ fontSize: '2rem', marginTop: '50px', color: 'white' }}>Todo App</h1>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
           <input
             type="text"
@@ -82,6 +82,8 @@ function Todo() {
               fontSize: '16px',
               borderRadius: '5px',
               border: '1px solid #ccc',
+              color: 'black', // Input text color
+              backgroundColor: 'white', // Input background color
             }}
           />
           <button
@@ -102,7 +104,7 @@ function Todo() {
         </div>
       </div>
 
-      <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+      <ul style={{ listStyle: 'none', paddingLeft: 0, color: 'white' }}>
         {todos.map(todo => (
           <li
             key={todo.id}
@@ -112,7 +114,7 @@ function Todo() {
               alignItems: 'center',
               marginBottom: '15px',
               padding: '10px',
-              backgroundColor: '#fff',
+              backgroundColor: '#333', // Dark background for each todo item
               borderRadius: '5px',
               boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
             }}
@@ -124,6 +126,7 @@ function Todo() {
                 cursor: 'pointer',
                 fontSize: '16px',
                 width: '80%',
+                color: 'white', // Text color for todos
               }}
             >
               {todo.title}
